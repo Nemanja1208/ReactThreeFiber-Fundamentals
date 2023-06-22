@@ -6,45 +6,45 @@ import Controls from "./Controls";
 import "./styles.css";
 
 const Cube = ({ position, rotation, scale = [1, 1, 1], handleClick }) => (
-  <group position={position} rotation={rotation} scale={scale}>
-    <Box args={[1, 1, 1]} onClick={handleClick}>
-      <meshStandardMaterial attach="material" color="white" />
-    </Box>
-  </group>
+  // <group position={position} rotation={rotation} scale={scale}>
+  <Box args={[1, 1, 1]} onClick={handleClick}>
+    <meshStandardMaterial attach="material" color="white" />
+  </Box>
+  // </group>
 );
 
-const Light = ({
-  position,
-  color,
-  intensity,
-  orbitalOffset = 0,
-  orbitalSpeed = 1,
-}) => {
-  const ref = useRef();
-  useFrame(() => {
-    let date = Date.now() * orbitalSpeed * 0.001 + orbitalOffset;
-    ref.current.position.set(
-      Math.cos(date) * 2 + position[0],
-      Math.sin(date) * 2 + position[1],
-      Math.sin(date) * 2 + position[2]
-    );
-  });
-  const texture = useTexture("lightbulb.png");
-  return (
-    <group position={position} ref={ref}>
-      <sprite>
-        <spriteMaterial
-          attach="material"
-          map={texture}
-          transparent
-          opacity={0.7}
-          color={color}
-        />
-      </sprite>
-      <pointLight color={color} intensity={intensity} decay={2} distance={20} />
-    </group>
-  );
-};
+// const Light = ({
+//   position,
+//   color,
+//   intensity,
+//   orbitalOffset = 0,
+//   orbitalSpeed = 1,
+// }) => {
+//   const ref = useRef();
+//   useFrame(() => {
+//     let date = Date.now() * orbitalSpeed * 0.001 + orbitalOffset;
+//     ref.current.position.set(
+//       Math.cos(date) * 2 + position[0],
+//       Math.sin(date) * 2 + position[1],
+//       Math.sin(date) * 2 + position[2]
+//     );
+//   });
+//   // const texture = useTexture("lightbulb.png");
+//   // return (
+//   //   <group position={position} ref={ref}>
+//   //     <sprite>
+//   //       <spriteMaterial
+//   //         attach="material"
+//   //         map={texture}
+//   //         transparent
+//   //         opacity={0.7}
+//   //         color={color}
+//   //       />
+//   //     </sprite>
+//   //     <pointLight color={color} intensity={intensity} decay={2} distance={20} />
+//   //   </group>
+//   // );
+// };
 
 export default function App() {
   const [xPosition, setXPosition] = useState(0);
@@ -77,7 +77,7 @@ export default function App() {
           <directionalLight intensity={0.5} position={[6, 2, 1]} />
           {/* <ambientLight intensity={0.1} /> */}
           <Grid size={10} />
-          <Light position={[3, 0, 2]} color="red" intensity={2} offset={200} />
+          {/* <Light position={[3, 0, 2]} color="red" intensity={2} offset={200} />
           <Light
             position={[2, 2, -2]}
             color="blue"
@@ -90,7 +90,7 @@ export default function App() {
             color="green"
             intensity={2}
             orbitalSpeed={3}
-          />
+          /> */}
 
           <Cube
             handleClick={() => console.log("clicked on the cube")}
