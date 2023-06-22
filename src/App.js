@@ -1,6 +1,6 @@
-import React, { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
-import { Box, OrbitControls, useTexture, Text } from "@react-three/drei";
+import React, { useState, Suspense } from "react";
+import { Canvas } from "react-three-fiber";
+import { Box, OrbitControls, Text } from "@react-three/drei";
 import Grid from "./Grid";
 import Controls from "./Controls";
 import "./styles.css";
