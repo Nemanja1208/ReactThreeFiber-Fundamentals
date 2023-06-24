@@ -38,7 +38,7 @@ export default function Grid({ size }) {
         anchorX="center" // default
         anchorY="middle" // default
         position={[size / 2 + 1, 0, 0]}
-        scale={[4, 4, 4]}
+        scale={[1, 1, 1]}
       >
         X+
       </Text>
@@ -47,7 +47,7 @@ export default function Grid({ size }) {
         anchorX="center" // default
         anchorY="middle" // default
         position={[-size / 2 - 1, 0, 0]}
-        scale={[4, 4, 4]}
+        scale={[1, 1, 1]}
       >
         X-
       </Text>
@@ -56,7 +56,7 @@ export default function Grid({ size }) {
         anchorX="center" // default
         anchorY="middle" // default
         position={[0, size / 2 + 1, 0]}
-        scale={[4, 4, 4]}
+        scale={[1, 1, 1]}
       >
         Y+
       </Text>
@@ -65,7 +65,7 @@ export default function Grid({ size }) {
         anchorX="center" // default
         anchorY="middle" // default
         position={[0, -size / 2 - 1, 0]}
-        scale={[4, 4, 4]}
+        scale={[1, 1, 1]}
       >
         Y-
       </Text>
@@ -74,7 +74,7 @@ export default function Grid({ size }) {
         anchorX="center" // default
         anchorY="middle" // default
         position={[0, 0, size / 2 + 1]}
-        scale={[4, 4, 4]}
+        scale={[1, 1, 1]}
       >
         Z+
       </Text>
@@ -83,7 +83,7 @@ export default function Grid({ size }) {
         anchorX="center" // default
         anchorY="middle" // default
         position={[0, 0, -size / 2 - 1]}
-        scale={[4, 4, 4]}
+        scale={[1, 1, 1]}
       >
         Z-
       </Text>

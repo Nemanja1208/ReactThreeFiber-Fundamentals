@@ -64,6 +64,7 @@ const Light = ({
 };
 
 export default function App() {
+  // Here we declare our state for the transformation of our Box
   const [xPosition, setXPosition] = useState(0);
   const [yPosition, setYPosition] = useState(0);
   const [zPosition, setZPosition] = useState(0);
@@ -75,6 +76,15 @@ export default function App() {
   const [xScale, setXScale] = useState(1);
   const [yScale, setYScale] = useState(1);
   const [zScale, setZScale] = useState(1);
+
+  // The parent element is ALWAYS the Canvas component and it has camera param which is the config on how we view the canvas...
+  // the Suspense is lazyLoad that shows Loading text until our Canvas is loaded
+  // In React Three Fiber, the OrbitControls component is often used to provide user-controlled navigation within a 3D scene.
+  // It allows users to explore the scene from different angles and perspectives by dragging the mouse, using touch gestures, or using keyboard inputs.
+  // By attaching the OrbitControls component to the camera in a React Three Fiber application, you can enable user interaction and control the camera's movement.
+  // The OrbitControls component listens to user input and updates the camera's position and orientation accordingly.
+  // We also display Grid which is the visual representation of the Coordinate System of the component that is sibling ?
+  // Outside of the Canvas element we append the Controls that we built in Controls.js file that help us interact with props of the canvas and/or its elements, in this case the Cube component
 
   return (
     <>
@@ -100,20 +110,6 @@ export default function App() {
             intensity={2}
             offset={200}
           />
-          {/* <Light
-            position={[2, 2, -2]}
-            color="blue"
-            intensity={2}
-            distance={10}
-            orbitalSpeed={2}
-          />
-          <Light
-            position={[-3, 0, 2]}
-            color="green"
-            intensity={2}
-            orbitalSpeed={3}
-          /> */}
-
           <Cube
             handleClick={() => console.log("clicked on the cube")}
             rotation={[
