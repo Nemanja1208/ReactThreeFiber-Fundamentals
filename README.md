@@ -10,7 +10,11 @@ https://codesandbox.io/s/react-three-fiber-lighting-essentials-qwxb8?file=/src/A
 
 ## 1 -> Installed react with three, react-three-fiber and @react-three/drei
 
-## 2 -> Going through docs and adjusting project code from Sandbox to match needs
+## 2 -> Going through docs and video and adjusting project code from Sandbox to match needs
+
+## 3 -> Adding comments to explain code in detail to myself and others
+
+#### Some notes on the side ->
 
 -Talking about coordinates, Z axis is configured to be towards you in WEBGL...
 -Cube is positioned in [0, 0, 0] - meaning center...
