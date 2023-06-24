@@ -5,9 +5,17 @@ import Grid from "./Grid";
 import Controls from "./Controls";
 import "./styles.css";
 
+// Cube object with position rotation and scaling props as well as onClick that is only console.log for now...
+// <group> that is commented can be used and is always used for grouping into a parentNode where all the components are inside the same coordinate system
 const Cube = ({ position, rotation, scale = [1, 1, 1], handleClick }) => (
   // <group position={position} rotation={rotation} scale={scale}>
-  <Box args={[1, 1, 1]} onClick={handleClick}>
+  <Box
+    args={[1, 1, 1]}
+    position={position}
+    rotation={rotation}
+    scale={scale}
+    onClick={handleClick}
+  >
     <meshStandardMaterial attach="material" color="white" />
   </Box>
   // </group>
